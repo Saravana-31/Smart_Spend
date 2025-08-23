@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { TrendingUp, TrendingDown, PieChart, Brain, Mic, Target, Calendar } from "lucide-react"
@@ -5,8 +6,23 @@ import { SpendingChart } from "@/components/spending-chart"
 import { CashFlowChart } from "@/components/cash-flow-chart"
 import { AIInsightCard } from "@/components/ai-insight-card"
 import { MoodCard } from "@/components/mood-card"
-
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { auth } from "@/lib/firebase";
 export default function Dashboard() {
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (!user) {
+    return <p>Please log in</p>;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}

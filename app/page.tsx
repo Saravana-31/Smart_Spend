@@ -1,10 +1,24 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Brain, PieChart, TrendingUp, Zap, Shield, Target, MessageSquare } from "lucide-react"
 import Link from "next/link"
-
+import { auth, provider } from "@/lib/firebase";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 export default function LandingPage() {
+    const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log("User signed in:", result.user);
+      // You can redirect to dashboard
+      window.location.href = "/dashboard";
+    } catch (error) {
+      console.error("Google sign-in error:", error);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Header */}
@@ -16,6 +30,7 @@ export default function LandingPage() {
             </div>
             <span className="text-xl font-bold text-gray-900">SmartSpend+</span>
           </div>
+          
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#features" className="text-gray-600 hover:text-emerald-600 transition-colors">
               Features
@@ -32,7 +47,22 @@ export default function LandingPage() {
               </Button>
             </Link>
           </nav>
+          
         </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <Link href="/dashboard">
+          <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+            Try Free
+          </Button>
+        </Link>
+        <Button
+          size="lg"
+          variant="outline"
+          className="px-8 py-3 rounded-xl border-2 bg-transparent"
+          onClick={handleGoogleSignIn}
+        >
+          Sign in with Google
+        </Button></div>
       </header>
 
       {/* Hero Section */}
