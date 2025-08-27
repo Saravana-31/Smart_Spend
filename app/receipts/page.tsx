@@ -225,7 +225,7 @@ export default function ReceiptVaultPage() {
                   with all supporting documents.
                 </p>
                 <div className="flex space-x-3">
-                  <Button className="bg-emerald-600 hover:bg-emerald-700">Download PDF Report</Button>
+                  <Button className="bg-emerald-600 hover:bg-emerald-701">Download PDF Report</Button>
                   <Button
                     variant="outline"
                     className="border-emerald-300 text-emerald-700 hover:bg-emerald-100 bg-transparent"
