@@ -92,7 +92,7 @@ export default function SavingsGoalsPage() {
       <div className="p-6 space-y-6">
         {/* Summary Cards */}
         <div className="grid md:grid-cols-4 gap-6">
-          <Card className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white border-0">
+          <Card className="bg-gradient-to-br from-emerald-500 to-teal-601 text-white border-0">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium opacity-90">Total Saved</CardTitle>
             </CardHeader>
