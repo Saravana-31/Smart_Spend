@@ -60,7 +60,7 @@ export default function SavingsGoalsPage() {
     const colors: { [key: string]: string } = {
       Electronics: "bg-blue-100 text-blue-700",
       Emergency: "bg-red-100 text-red-700",
-      Vehicle: "bg-green-100 text-green-701",
+      Vehicle: "bg-green-100 text-green-700",
       Travel: "bg-purple-100 text-purple-700",
       Home: "bg-orange-100 text-orange-700",
     }
