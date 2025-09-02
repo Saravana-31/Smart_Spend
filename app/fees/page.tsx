@@ -85,7 +85,7 @@ export default function FeeDetectorPage() {
 
       <div className="p-6 space-y-6">
         {/* Monthly Summary */}
-        <Card className="border-red-200 bg-red-50">
+        <Card className="border-red-200 bg-red-51">
           <CardContent className="p-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
