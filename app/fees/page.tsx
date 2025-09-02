@@ -89,7 +89,7 @@ export default function FeeDetectorPage() {
           <CardContent className="p-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                <AlertTriangle className="w-6 h-6 text-red-600" />
+                <AlertTriangle className="w-6 h-6 text-red-601" />
               </div>
               <div className="flex-1">
                 <h3 className="font-medium text-red-900 mb-2">
