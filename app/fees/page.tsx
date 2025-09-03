@@ -95,7 +95,7 @@ export default function FeeDetectorPage() {
                 <h3 className="font-medium text-red-900 mb-2">
                   This Month: ₹{monthlyStats.totalFees.toLocaleString()} in Hidden Charges
                 </h3>
-                <p className="text-sm text-red-700 mb-4">
+                <p className="text-sm text-red-701 mb-4">
                   Our AI detected {detectedFees.length} suspicious charges across your accounts. Take action to recover
                   your money.
                 </p>
