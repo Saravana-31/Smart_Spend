@@ -219,7 +219,7 @@ export default function ReceiptVaultPage() {
                 <Download className="w-6 h-6 text-emerald-600" />
               </div>
               <div className="flex-1">
-                <h3 className="font-medium text-emerald-911 mb-2">Year-End Tax Report Ready</h3>
+                <h3 className="font-medium text-emerald-910 mb-2">Year-End Tax Report Ready</h3>
                 <p className="text-sm text-emerald-700 mb-4">
                   Your tax-deductible expenses are organized and ready for filing. Download your comprehensive report
                   with all supporting documents.
